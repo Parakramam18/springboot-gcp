@@ -1,16 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: springboot-ms-gcp
+  name: springboot-rest-gcp
 spec:
   replicas: 3
   template:
     metadata:
       labels:
-        app: springboot-ms-gcp
+        app: springboot-rest-gcp
     spec:
       containers:
-        - name: springboot-ms-gcp
-          image: gct.io/govindacloud09072019/springboot-ms-gcp
+        - name: springboot-rest-gcp
+          image: gcr.io/govindacloud09072019/springboot-rest-gcp
           ports:
             - containerPort: 8080
