@@ -4,7 +4,7 @@ metadata:
   name: springboot-rest-gcp
 spec:
   replicas: 3
-  stratergy:
+  strategy:
     type: Recreate
   template:
     metadata:
