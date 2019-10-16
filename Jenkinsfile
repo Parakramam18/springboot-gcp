@@ -7,9 +7,9 @@ pipeline
    {
    steps
    {
-   withMaven(maven : 'Maven')
+   withMaven(maven:'Maven')
    {
-   sh 'mvn clean compile'
+   bat 'mvn clean compile'
    }
    }
 
@@ -20,9 +20,9 @@ pipeline
   {
    steps
     {
-        withMaven(maven : 'Maven')
+        withMaven(maven:'Maven')
             {
-                sh 'mvn package -Dmaven.test.skip=true'
+                bat 'mvn package -Dmaven.test.skip=true'
             }
    }
   }
