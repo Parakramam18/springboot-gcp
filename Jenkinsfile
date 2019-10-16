@@ -1,7 +1,7 @@
 pipeline
   {
   agent any
-  Stages
+  stages
   {
   stage ('Compile maven spring-boot')
    {
