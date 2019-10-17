@@ -1,0 +1,6 @@
+---
+applications:
+-  name: restwsspringboot
+   instances: 1
+   memory: 250m
+   path: target/restwsspringboot-0.1.jar
