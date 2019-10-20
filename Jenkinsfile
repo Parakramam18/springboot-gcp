@@ -30,7 +30,17 @@ pipeline
       }
      }
 
-
+        stage('Build Docker image')
+        {
+              app = docker.build("govindacloud09072019/sb-gcp-jenkins")
+        }
+        stage('Push image')
+        {
+              docker.withRegistry('https://us.gcr.io', 'gcr-id') {
+                app.push("${env.BUILD_NUMBER}")
+                app.push("latest")
+              }
+            }
 
 
 
