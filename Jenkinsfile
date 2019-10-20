@@ -32,7 +32,7 @@ pipeline
 
         stage('Build Docker image')
         {
-              app = docker.build("govindacloud09072019/sb-gcp-jenkins")
+              app = docker.build("gcr.io/govindacloud09072019/sb-gcp-jenkins")
         }
         stage('Push image')
         {
